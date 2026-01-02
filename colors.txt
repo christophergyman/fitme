@@ -1,0 +1,29 @@
+~Strawberry Red
+#f94144
+
+~Pumpkin Spice
+#f3722c
+
+~Carrot Orange
+#f8961e
+
+~Atomic Tangerine
+#f9844a
+
+~Tuscan Sun
+#f9c74f
+
+~Willow Green
+#90be6d
+
+~Seaweed
+#43aa8b
+
+~Dark Cyan
+#4d908e
+
+~Blue Slate
+#577590
+
+~Cerulean
+#277da1
