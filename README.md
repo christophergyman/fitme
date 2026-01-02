@@ -2,6 +2,8 @@
 
 A personal fitness tracker with a GitHub-style contribution grid interface. Track your daily training activities and diet to visualize your fitness journey throughout the year.
 
+![FitMe Screenshot](screenshot.png)
+
 ## Features
 
 - **GitHub-style Contribution Grid** - Visual representation of your fitness activities with color-coded intensity levels
