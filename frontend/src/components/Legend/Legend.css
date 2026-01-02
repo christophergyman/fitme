@@ -1,0 +1,23 @@
+.legend {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  font-size: 12px;
+  color: #57606a;
+}
+
+.legend-squares {
+  display: flex;
+  gap: 3px;
+}
+
+.legend-square {
+  width: 12px;
+  height: 12px;
+  border-radius: 2px;
+  outline: 1px solid rgba(27, 31, 35, 0.06);
+}
+
+.legend-label {
+  margin: 0 2px;
+}

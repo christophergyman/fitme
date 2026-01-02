@@ -1,0 +1,56 @@
+import type { Activity } from '../types';
+
+// Color palette from colors.txt (warm tones for activity intensity)
+export const COLORS = {
+  empty: '#ebedf0',
+  level1: '#f9c74f',  // Tuscan Sun - lowest activity
+  level2: '#f8961e',  // Carrot Orange
+  level3: '#f94144',  // Strawberry Red - highest activity
+};
+
+export function getActivityScore(activity: Activity | null): number {
+  if (!activity) return 0;
+
+  let score = 0;
+
+  // Training contribution: none=0, cardio=1, physical=2
+  if (activity.training_type === 'cardio') score += 1;
+  if (activity.training_type === 'physical') score += 2;
+
+  // Diet contribution: bad/null=0, good=1
+  if (activity.diet === 'good') score += 1;
+
+  return score; // 0, 1, 2, or 3
+}
+
+export function getColorForActivity(activity: Activity | null): string {
+  const score = getActivityScore(activity);
+
+  switch (score) {
+    case 0:
+      return COLORS.empty;
+    case 1:
+      return COLORS.level1;
+    case 2:
+      return COLORS.level2;
+    case 3:
+      return COLORS.level3;
+    default:
+      return COLORS.empty;
+  }
+}
+
+export function getColorForScore(score: number): string {
+  switch (score) {
+    case 0:
+      return COLORS.empty;
+    case 1:
+      return COLORS.level1;
+    case 2:
+      return COLORS.level2;
+    case 3:
+      return COLORS.level3;
+    default:
+      return COLORS.empty;
+  }
+}
