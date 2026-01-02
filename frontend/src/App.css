@@ -45,13 +45,15 @@ body {
   color: var(--text-primary);
   line-height: 1.5;
   transition: background-color 0.2s ease, color 0.2s ease;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .app {
-  min-height: 100vh;
   padding: 40px 20px;
   max-width: 1000px;
-  margin: 0 auto;
   width: 100%;
 }
 
