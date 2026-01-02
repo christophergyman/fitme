@@ -24,13 +24,14 @@
 
 .modal-content {
   position: relative;
-  background: #ffffff;
+  background: var(--bg-secondary);
   padding: 32px;
   border-radius: 12px;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 8px 32px var(--shadow);
   min-width: 320px;
   max-width: 90vw;
   animation: slideUp 0.2s ease-out;
+  border: 1px solid var(--border-color);
 }
 
 @keyframes slideUp {
@@ -51,24 +52,24 @@
   background: none;
   border: none;
   font-size: 24px;
-  color: #57606a;
+  color: var(--text-secondary);
   cursor: pointer;
   padding: 4px 8px;
   line-height: 1;
   border-radius: 4px;
-  transition: background-color 0.15s ease;
+  transition: background-color 0.15s ease, color 0.15s ease;
 }
 
 .modal-close:hover {
-  background-color: #f3f4f6;
-  color: #1f2937;
+  background-color: var(--border-color);
+  color: var(--text-primary);
 }
 
 .modal-date {
   margin: 0 0 24px 0;
   font-size: 18px;
   font-weight: 600;
-  color: #1f2937;
+  color: var(--text-primary);
 }
 
 .form-group {
@@ -79,7 +80,7 @@
   display: block;
   font-size: 14px;
   font-weight: 500;
-  color: #374151;
+  color: var(--text-tertiary);
   margin-bottom: 8px;
 }
 
@@ -99,7 +100,7 @@
 }
 
 .radio-option:hover {
-  background-color: #f9fafb;
+  background-color: var(--border-color);
 }
 
 .radio-option input[type='radio'] {
@@ -112,7 +113,7 @@
 .radio-label {
   margin-left: 10px;
   font-size: 14px;
-  color: #4b5563;
+  color: var(--text-secondary);
 }
 
 .modal-actions {
@@ -120,7 +121,7 @@
   gap: 12px;
   margin-top: 24px;
   padding-top: 16px;
-  border-top: 1px solid #e5e7eb;
+  border-top: 1px solid var(--border-color);
 }
 
 .btn {
@@ -148,10 +149,11 @@
 }
 
 .btn--danger {
-  background-color: #fef2f2;
-  color: #dc2626;
+  background-color: var(--error-bg);
+  color: var(--error-text);
+  border: 1px solid var(--error-border);
 }
 
 .btn--danger:hover:not(:disabled) {
-  background-color: #fee2e2;
+  background-color: var(--error-border);
 }

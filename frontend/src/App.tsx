@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { ContributionGrid } from './components/ContributionGrid/ContributionGrid';
 import { ActivityModal } from './components/ActivityModal/ActivityModal';
 import { Legend } from './components/Legend/Legend';
@@ -9,6 +9,15 @@ function App() {
   const currentYear = new Date().getFullYear();
   const [year, setYear] = useState(currentYear);
   const [selectedDate, setSelectedDate] = useState<string | null>(null);
+  const [darkMode, setDarkMode] = useState(() => {
+    const saved = localStorage.getItem('fitme-dark-mode');
+    return saved ? JSON.parse(saved) : false;
+  });
+
+  useEffect(() => {
+    localStorage.setItem('fitme-dark-mode', JSON.stringify(darkMode));
+    document.documentElement.setAttribute('data-theme', darkMode ? 'dark' : 'light');
+  }, [darkMode]);
 
   const { activities, loading, error, updateActivity, deleteActivity, getActivity } = useActivityData(year);
 
@@ -25,6 +34,13 @@ function App() {
   return (
     <div className="app">
       <header className="header">
+        <button
+          className="theme-toggle"
+          onClick={() => setDarkMode(!darkMode)}
+          aria-label={darkMode ? 'Switch to light mode' : 'Switch to dark mode'}
+        >
+          {darkMode ? '☀️' : '🌙'}
+        </button>
         <h1 className="title">FitMe</h1>
         <p className="subtitle">Track your fitness journey</p>
       </header>

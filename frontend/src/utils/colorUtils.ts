@@ -1,12 +1,19 @@
 import type { Activity } from '../types';
 
 // Color palette from colors.txt (warm tones for activity intensity)
+// Empty color uses CSS variable for theme support
 export const COLORS = {
-  empty: '#ebedf0',
   level1: '#f9c74f',  // Tuscan Sun - lowest activity
   level2: '#f8961e',  // Carrot Orange
   level3: '#f94144',  // Strawberry Red - highest activity
 };
+
+function getEmptyColor(): string {
+  if (typeof window !== 'undefined') {
+    return getComputedStyle(document.documentElement).getPropertyValue('--square-empty').trim() || '#ebedf0';
+  }
+  return '#ebedf0';
+}
 
 export function getActivityScore(activity: Activity | null): number {
   if (!activity) return 0;
@@ -28,7 +35,7 @@ export function getColorForActivity(activity: Activity | null): string {
 
   switch (score) {
     case 0:
-      return COLORS.empty;
+      return getEmptyColor();
     case 1:
       return COLORS.level1;
     case 2:
@@ -36,14 +43,14 @@ export function getColorForActivity(activity: Activity | null): string {
     case 3:
       return COLORS.level3;
     default:
-      return COLORS.empty;
+      return getEmptyColor();
   }
 }
 
 export function getColorForScore(score: number): string {
   switch (score) {
     case 0:
-      return COLORS.empty;
+      return getEmptyColor();
     case 1:
       return COLORS.level1;
     case 2:
@@ -51,6 +58,6 @@ export function getColorForScore(score: number): string {
     case 3:
       return COLORS.level3;
     default:
-      return COLORS.empty;
+      return getEmptyColor();
   }
 }
