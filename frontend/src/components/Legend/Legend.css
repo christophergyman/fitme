@@ -15,7 +15,7 @@
   width: 12px;
   height: 12px;
   border-radius: 2px;
-  outline: 1px solid var(--border-color);
+  outline: 1px solid var(--square-outline);
 }
 
 .legend-label {

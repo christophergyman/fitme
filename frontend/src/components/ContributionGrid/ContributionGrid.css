@@ -55,7 +55,7 @@
   border-radius: 2px;
   cursor: pointer;
   transition: transform 0.1s ease, outline 0.1s ease;
-  outline: 1px solid var(--border-color);
+  outline: 1px solid var(--square-outline);
 }
 
 .day-square:hover {
