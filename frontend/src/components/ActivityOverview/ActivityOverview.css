@@ -1,0 +1,132 @@
+.activity-overview {
+  margin-bottom: 24px;
+  padding: 16px;
+  background: var(--bg-secondary);
+  border-radius: 8px;
+  border: 1px solid var(--border-color);
+}
+
+.activity-overview-title {
+  margin: 0 0 16px 0;
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--text-tertiary);
+}
+
+.activity-overview-content {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+.activity-overview-chart {
+  width: 160px;
+  height: 160px;
+  flex-shrink: 0;
+  position: relative;
+}
+
+.axis-line {
+  stroke: var(--border-color);
+  stroke-width: 1;
+}
+
+.bar {
+  transition: all 0.3s ease;
+}
+
+.bar-physical {
+  fill: #f94144;
+}
+
+.bar-cardio {
+  fill: #f9c74f;
+}
+
+.bar-diet {
+  fill: #90be6d;
+}
+
+.bar-rest {
+  fill: var(--text-secondary);
+}
+
+.center-dot {
+  fill: var(--text-secondary);
+}
+
+.activity-overview-labels {
+  position: absolute;
+  width: 160px;
+  height: 160px;
+  pointer-events: none;
+  display: none;
+}
+
+.activity-overview-stats {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.stat-item {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 12px;
+}
+
+.stat-dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 2px;
+  flex-shrink: 0;
+}
+
+.stat-dot-physical {
+  background-color: #f94144;
+}
+
+.stat-dot-cardio {
+  background-color: #f9c74f;
+}
+
+.stat-dot-diet {
+  background-color: #90be6d;
+}
+
+.stat-dot-rest {
+  background-color: var(--text-secondary);
+}
+
+.stat-label {
+  color: var(--text-secondary);
+  min-width: 70px;
+}
+
+.stat-value {
+  color: var(--text-primary);
+  font-weight: 500;
+}
+
+@media (max-width: 768px) {
+  .activity-overview-content {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .activity-overview-chart {
+    align-self: center;
+  }
+
+  .activity-overview-stats {
+    width: 100%;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+  }
+
+  .stat-item {
+    width: 48%;
+  }
+}

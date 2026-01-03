@@ -1,6 +1,7 @@
 import { useState, useEffect } from 'react';
 import { ContributionGrid } from './components/ContributionGrid/ContributionGrid';
 import { ActivityModal } from './components/ActivityModal/ActivityModal';
+import { ActivityOverview } from './components/ActivityOverview/ActivityOverview';
 import { Legend } from './components/Legend/Legend';
 import { useActivityData } from './hooks/useActivityData';
 import './App.css';
@@ -70,12 +71,15 @@ function App() {
         {loading ? (
           <div className="loading">Loading activities...</div>
         ) : (
-          <div className="grid-section">
-            <ContributionGrid year={year} activities={activities} onDayClick={handleDayClick} />
-            <div className="legend-wrapper">
-              <Legend />
+          <>
+            <div className="grid-section">
+              <ContributionGrid year={year} activities={activities} onDayClick={handleDayClick} />
+              <div className="legend-wrapper">
+                <Legend />
+              </div>
             </div>
-          </div>
+            <ActivityOverview activities={activities} year={year} />
+          </>
         )}
 
         <div className="info-section">
