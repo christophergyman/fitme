@@ -107,7 +107,7 @@
   margin: 0;
   width: 16px;
   height: 16px;
-  accent-color: #f8961e;
+  accent-color: #D97757;
 }
 
 .radio-label {
@@ -140,12 +140,12 @@
 }
 
 .btn--primary {
-  background-color: #f8961e;
+  background-color: #D97757;
   color: #ffffff;
 }
 
 .btn--primary:hover:not(:disabled) {
-  background-color: #f3722c;
+  background-color: #C4624A;
 }
 
 .btn--danger {

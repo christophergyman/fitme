@@ -3,7 +3,7 @@
 }
 
 :root {
-  --bg-primary: #f6f8fa;
+  --bg-primary: #FAF9F7;
   --bg-secondary: #ffffff;
   --text-primary: #1f2937;
   --text-secondary: #57606a;
@@ -16,13 +16,13 @@
   --error-border: #fecaca;
   --error-text: #dc2626;
   --shadow: rgba(0, 0, 0, 0.1);
-  --square-empty: #ebedf0;
+  --square-empty: #E8E6E3;
   --square-outline: rgba(27, 31, 35, 0.06);
 }
 
 [data-theme='dark'] {
-  --bg-primary: #0d1117;
-  --bg-secondary: #161b22;
+  --bg-primary: #1A1A1A;
+  --bg-secondary: #252525;
   --text-primary: #e6edf3;
   --text-secondary: #8b949e;
   --text-tertiary: #c9d1d9;
@@ -34,7 +34,7 @@
   --error-border: #5c2828;
   --error-text: #f87171;
   --shadow: rgba(0, 0, 0, 0.3);
-  --square-empty: #21262d;
+  --square-empty: #2D2D2D;
   --square-outline: rgba(255, 255, 255, 0.1);
 }
 
@@ -85,7 +85,7 @@ body {
   margin: 0;
   font-size: 32px;
   font-weight: 700;
-  color: #f8961e;
+  color: #D97757;
 }
 
 .subtitle {
@@ -137,8 +137,8 @@ body {
 
 .year-selector:focus {
   outline: none;
-  border-color: #f8961e;
-  box-shadow: 0 0 0 3px rgba(248, 150, 30, 0.2);
+  border-color: #D97757;
+  box-shadow: 0 0 0 3px rgba(217, 119, 87, 0.2);
 }
 
 .grid-section {
