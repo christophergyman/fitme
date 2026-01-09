@@ -36,15 +36,15 @@
 }
 
 .bar-physical {
-  fill: #f94144;
+  fill: #D97757;
 }
 
 .bar-cardio {
-  fill: #f9c74f;
+  fill: #E8B87D;
 }
 
 .bar-diet {
-  fill: #90be6d;
+  fill: #7D8B7E;
 }
 
 .bar-rest {
@@ -84,15 +84,15 @@
 }
 
 .stat-dot-physical {
-  background-color: #f94144;
+  background-color: #D97757;
 }
 
 .stat-dot-cardio {
-  background-color: #f9c74f;
+  background-color: #E8B87D;
 }
 
 .stat-dot-diet {
-  background-color: #90be6d;
+  background-color: #7D8B7E;
 }
 
 .stat-dot-rest {

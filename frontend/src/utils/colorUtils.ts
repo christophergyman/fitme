@@ -1,12 +1,12 @@
 import type { Activity } from '../types';
 
-// Color palette from colors.txt (warm tones for activity intensity)
+// Color palette (warm earth tones for activity intensity)
 // Empty color uses CSS variable for theme support
 export const COLORS = {
   empty: 'var(--square-empty)',  // CSS variable - automatically updates with theme
-  level1: '#f9c74f',  // Tuscan Sun - lowest activity
-  level2: '#f8961e',  // Carrot Orange
-  level3: '#f94144',  // Strawberry Red - highest activity
+  level1: '#7D8B7E',  // Muted Sage - lowest activity
+  level2: '#E8B87D',  // Soft Amber
+  level3: '#D97757',  // Warm Terracotta - highest activity
 };
 
 export function getActivityScore(activity: Activity | null): number {
